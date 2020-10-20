@@ -1,7 +1,9 @@
 import React from 'react'
 import Screen from './Screen'
 import ButtonKey from './ButtonKey'
+import ClrButton from './ClrButton'
 import styled from 'styled-components';
+import * as math from 'mathjs';
 
 const ButtonRow = styled.div`
     display: flex;
@@ -10,6 +12,7 @@ const ButtonRow = styled.div`
     width: 25rem;
 `
 const  CalculatorBasic =() =>{
+    console.log(math.evaluate('12 / (2.3 + 0.7)'))
     return (
         <div>
             <Screen />
@@ -37,6 +40,9 @@ const  CalculatorBasic =() =>{
                 <ButtonKey val={"="}/>
                 <ButtonKey val={"+"}/>
             </ButtonRow>
+            <div>
+            <ClrButton />
+            </div>
         </div>
     )
 }
