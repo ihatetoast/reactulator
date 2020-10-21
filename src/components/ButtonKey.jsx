@@ -6,17 +6,14 @@ const StyledButtonKey = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: lime;
+    background: ${props => props.buttontype === "operator" ? "lime" : "rebeccapurple"};
     height: 5em;
     width: 5em;
 `
-
-const ButtonKey = (props) =>{
-    return (
-        <StyledButtonKey>
-           {props.val} 
-        </StyledButtonKey>
-    )
+const isNotOp = value =>{
+    return !isNaN(value) || value === "=" || value === ".";
 }
+const ButtonKey = props =><StyledButtonKey buttontype={`${isNotOp(props.val) ? null : "operator"}`}>{props.children}</StyledButtonKey>
+
 
 export default ButtonKey;

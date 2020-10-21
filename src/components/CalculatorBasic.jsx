@@ -9,40 +9,47 @@ const ButtonRow = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 1em;
-    width: 25rem;
+`
+const ButtonsWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 336px;
+    background: #dedede;
 `
 const  CalculatorBasic =() =>{
     console.log(math.evaluate('12 / (2.3 + 0.7)'))
     return (
         <div>
             <Screen />
-            <ButtonRow>
-                <ButtonKey val={"7"}/>
-                <ButtonKey val={"8"}/>
-                <ButtonKey val={"9"}/>
-                <ButtonKey val={"+"}/>
-            </ButtonRow>
-            <ButtonRow>
-                <ButtonKey val={"4"}/>
-                <ButtonKey val={"5"}/>
-                <ButtonKey val={"6"}/>
-                <ButtonKey val={"-"}/>
-            </ButtonRow>
-            <ButtonRow>
-                <ButtonKey val={"1"}/>
-                <ButtonKey val={"2"}/>
-                <ButtonKey val={"3"}/>
-                <ButtonKey val={"*"}/>
-            </ButtonRow>
-            <ButtonRow>
-                <ButtonKey val={"."}/>
-                <ButtonKey val={"0"}/>
-                <ButtonKey val={"="}/>
-                <ButtonKey val={"+"}/>
-            </ButtonRow>
-            <div>
-            <ClrButton />
-            </div>
+            <ButtonsWrapper>
+                <ButtonRow>
+                    <ButtonKey val={"7"}>7</ButtonKey>
+                    <ButtonKey val={"8"}>8</ButtonKey>
+                    <ButtonKey val={"9"}>9</ButtonKey>
+                    <ButtonKey val={"/"}>/</ButtonKey>
+                </ButtonRow>
+                <ButtonRow>
+                    <ButtonKey val={"4"}>4</ButtonKey>
+                    <ButtonKey val={"5"}>5</ButtonKey>
+                    <ButtonKey val={"6"}>6</ButtonKey>
+                    <ButtonKey val={"x"}>x</ButtonKey>
+                </ButtonRow>
+                <ButtonRow>
+                    <ButtonKey val={"1"}>1</ButtonKey>
+                    <ButtonKey val={"2"}>2</ButtonKey>
+                    <ButtonKey val={"3"}>3</ButtonKey>
+                    <ButtonKey val={"-"}>-</ButtonKey>
+                </ButtonRow>
+                <ButtonRow>
+                    <ButtonKey val={"."}>.</ButtonKey>
+                    <ButtonKey val={"0"}>0</ButtonKey>
+                    <ButtonKey val={"="}>=</ButtonKey>
+                    <ButtonKey val={"+"}>+</ButtonKey>
+                </ButtonRow>
+                <div>
+                    <ClrButton />
+                </div>
+            </ButtonsWrapper>
         </div>
     )
 }
