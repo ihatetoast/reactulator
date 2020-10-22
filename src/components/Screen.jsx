@@ -1,3 +1,4 @@
+import { prodDependencies } from 'mathjs'
 import React from 'react'
 import styled from 'styled-components'
 const CalculatorScreen = styled.div`
@@ -14,6 +15,6 @@ const CalculatorScreen = styled.div`
     justify-content: flex-end;
     align-items: center;
 `
-const Screen =()=> (<CalculatorScreen>12345</CalculatorScreen>)
+const Screen =(props)=> (<CalculatorScreen>{props.children}</CalculatorScreen>)
 
 export default  Screen

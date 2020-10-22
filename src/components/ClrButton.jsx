@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ClrButton =()=> {
+const ClrButton =(props)=> {
     return (
-        <div>
-            Clear
+        <div onClick={props.handleClear}>
+            {props.children}
         </div>
     )
 }
