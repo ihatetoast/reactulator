@@ -13,7 +13,7 @@ const StyledButtonKey = styled.div`
 const isNotOp = value =>{
     return !isNaN(value) || value === "=" || value === ".";
 }
-const ButtonKey = props =><StyledButtonKey buttontype={`${isNotOp(props.val) ? null : "operator"}`}>{props.children}</StyledButtonKey>
+const ButtonKey = props =><StyledButtonKey onClick={()=>props.handleClick(props.val)} buttontype={`${isNotOp(props.val) ? null : "operator"}`}>{props.children}</StyledButtonKey>
 
 
 export default ButtonKey;
