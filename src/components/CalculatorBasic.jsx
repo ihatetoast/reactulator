@@ -13,7 +13,8 @@ const ButtonRow = styled.div`
 const ButtonsWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: 336px;
+    width: 400px;
+    padding: 1em;
     background: #dedede;
 `
 
@@ -22,12 +23,17 @@ class CalculatorBasic extends Component {
     constructor(props){
         super(props)
         this.state = {
-            input: "0"
+            input: ""
         }
 
     }
     concatInput=(val)=>{
         this.setState({input: this.state.input + val})
+    }
+    handleEqual=()=>{
+        const evalInput = math.evaluate(this.state.input);
+
+        this.setState({input:evalInput})
     }
    
     render() {
@@ -58,11 +64,11 @@ class CalculatorBasic extends Component {
                     <ButtonRow>
                         <ButtonKey val={"."} handleClick={this.concatInput}>.</ButtonKey>
                         <ButtonKey val={"0"} handleClick={this.concatInput}>0</ButtonKey>
-                        <ButtonKey val={"="} handleClick={this.concatInput}>=</ButtonKey>
+                        <ButtonKey val={"="} handleClick={this.handleEqual}>=</ButtonKey>
                         <ButtonKey val={"+"} handleClick={this.concatInput}>+</ButtonKey>
                     </ButtonRow>
                     <div>
-                        <ClrButton handleClear={()=>this.setState({input: "0"})}>Clear</ClrButton>
+                        <ClrButton handleClear={()=>this.setState({input: ""})}>Clear</ClrButton>
                     </div>
                 </ButtonsWrapper>
             </div>
