@@ -23,21 +23,31 @@ class CalculatorBasic extends Component {
     constructor(props){
         super(props)
         this.state = {
-            input: ""
+            input: "", 
+            prevNum:"",
+            currentNum:"",
+            isEvaluated: false
         }
 
     }
     concatInput=(val)=>{
         this.setState({input: this.state.input + val})
     }
+
     handleEqual=()=>{
         const evalInput = math.evaluate(this.state.input);
-
-        this.setState({input:evalInput})
+        this.setState({
+            input:evalInput,
+            isEvaluated: true
+        })
     }
-   
+    handleZero=(val)=>{
+       if(!this.state.isEvaluated && this.state.input !== ""){
+        this.setState({input: this.state.input + val})
+       }
+    }
     render() {
-        console.log(math.evaluate('12 / (2.3 + 0.7)'))
+
     
         return (
             <div>
@@ -63,12 +73,12 @@ class CalculatorBasic extends Component {
                     </ButtonRow>
                     <ButtonRow>
                         <ButtonKey val={"."} handleClick={this.concatInput}>.</ButtonKey>
-                        <ButtonKey val={"0"} handleClick={this.concatInput}>0</ButtonKey>
+                        <ButtonKey val={"0"} handleClick={this.handleZero}>0</ButtonKey>
                         <ButtonKey val={"="} handleClick={this.handleEqual}>=</ButtonKey>
                         <ButtonKey val={"+"} handleClick={this.concatInput}>+</ButtonKey>
                     </ButtonRow>
                     <div>
-                        <ClrButton handleClear={()=>this.setState({input: ""})}>Clear</ClrButton>
+                        <ClrButton handleClear={()=>this.setState({input: "", isEvaluated: false})}>Clear</ClrButton>
                     </div>
                 </ButtonsWrapper>
             </div>
