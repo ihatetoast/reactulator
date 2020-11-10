@@ -24,14 +24,13 @@ class CalculatorBasic extends Component {
         super(props)
         this.state = {
             input: "", 
-            prevNum:"",
-            currentNum:"",
             isEvaluated: false
         }
 
     }
     concatInput=(val)=>{
-        this.setState({input: this.state.input + val})
+        this.setState({input: this.state.input + val});
+
     }
 
     handleEqual=()=>{
@@ -45,6 +44,7 @@ class CalculatorBasic extends Component {
        if(!this.state.isEvaluated && this.state.input !== ""){
         this.setState({input: this.state.input + val})
        }
+       return;
     }
     render() {
 
