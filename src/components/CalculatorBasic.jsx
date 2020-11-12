@@ -24,19 +24,25 @@ class CalculatorBasic extends Component {
         super(props)
         this.state = {
             input: "", 
+            currentEntry:"",
             isEvaluated: false
         }
 
     }
     concatInput=(val)=>{
-        this.setState({input: this.state.input + val});
+        let runningVal = "";
 
+        // this.setState({
+        //     input: this.state.input + val,
+        // });
+        console.log(runningVal);
     }
 
     handleEqual=()=>{
         const evalInput = math.evaluate(this.state.input);
         this.setState({
             input:evalInput,
+            currentEntry:"",
             isEvaluated: true
         })
     }
@@ -46,6 +52,7 @@ class CalculatorBasic extends Component {
        }
        return;
     }
+
     render() {
 
     
