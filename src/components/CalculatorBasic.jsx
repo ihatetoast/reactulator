@@ -30,12 +30,14 @@ class CalculatorBasic extends Component {
 
     }
     concatInput=(val)=>{
-        let runningVal = "";
+        this.setState({
+            input: this.state.currentEntry + val,
+        });
 
         // this.setState({
         //     input: this.state.input + val,
         // });
-        console.log(runningVal);
+    
     }
 
     handleEqual=()=>{
@@ -61,28 +63,28 @@ class CalculatorBasic extends Component {
                 <Screen>{this.state.input}</Screen>
                 <ButtonsWrapper>
                     <ButtonRow>
-                        <ButtonKey val={"7"} handleClick={this.concatInput}>7</ButtonKey>
-                        <ButtonKey val={"8"} handleClick={this.concatInput}>8</ButtonKey>
-                        <ButtonKey val={"9"} handleClick={this.concatInput}>9</ButtonKey>
-                        <ButtonKey val={"/"} handleClick={this.concatInput}>/</ButtonKey>
+                        <ButtonKey val={"8"} face={"8"} handleClick={this.concatInput}/>
+                        <ButtonKey val={"7"} face={"7"} handleClick={this.concatInput}/>
+                        <ButtonKey val={"9"} face={"9"} handleClick={this.concatInput}/>
+                        <ButtonKey val={"/"} face={"/"} handleClick={this.concatInput}/>
                     </ButtonRow>
                     <ButtonRow>
-                        <ButtonKey val={"4"} handleClick={this.concatInput}>4</ButtonKey>
-                        <ButtonKey val={"5"} handleClick={this.concatInput}>5</ButtonKey>
-                        <ButtonKey val={"6"} handleClick={this.concatInput}>6</ButtonKey>
-                        <ButtonKey val={"*"} handleClick={this.concatInput}>x</ButtonKey>
+                        <ButtonKey val={"5"} face={"5"} handleClick={this.concatInput}/>
+                        <ButtonKey val={"4"} face={"4"} handleClick={this.concatInput}/>
+                        <ButtonKey val={"6"} face={"6"} handleClick={this.concatInput}/>
+                        <ButtonKey val={"*"} face={"x"} handleClick={this.concatInput}/>
                     </ButtonRow>
                     <ButtonRow>
-                        <ButtonKey val={"1"} handleClick={this.concatInput}>1</ButtonKey>
-                        <ButtonKey val={"2"} handleClick={this.concatInput}>2</ButtonKey>
-                        <ButtonKey val={"3"} handleClick={this.concatInput}>3</ButtonKey>
-                        <ButtonKey val={"-"} handleClick={this.concatInput}>-</ButtonKey>
+                        <ButtonKey val={"1"} face={"1"} handleClick={this.concatInput}/>
+                        <ButtonKey val={"2"} face={"2"} handleClick={this.concatInput}/>
+                        <ButtonKey val={"3"} face={"3"} handleClick={this.concatInput}/>
+                        <ButtonKey val={"-"} face={"-"} handleClick={this.concatInput}/>
                     </ButtonRow>
                     <ButtonRow>
-                        <ButtonKey val={"."} handleClick={this.concatInput}>.</ButtonKey>
-                        <ButtonKey val={"0"} handleClick={this.handleZero}>0</ButtonKey>
-                        <ButtonKey val={"="} handleClick={this.handleEqual}>=</ButtonKey>
-                        <ButtonKey val={"+"} handleClick={this.concatInput}>+</ButtonKey>
+                        <ButtonKey val={"."} face={"."} handleClick={this.concatInput}/>
+                        <ButtonKey val={"0"} face={"0"} handleClick={this.handleZero}/>
+                        <ButtonKey val={"="} face={"="} handleClick={this.handleEqual}/>
+                        <ButtonKey val={"+"} face={"+"} handleClick={this.concatInput}/>
                     </ButtonRow>
                     <div>
                         <ClrButton handleClear={()=>this.setState({input: "", isEvaluated: false})}>Clear</ClrButton>
