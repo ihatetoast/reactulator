@@ -4,6 +4,7 @@ import CalculatorBasic from "./components/CalculatorBasic"
 import './App.css';
 
 function App() {
+
 const genArr = Array.from({length: 25}, (x, i) => i);
 
 console.log(genArr)

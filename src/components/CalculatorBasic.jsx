@@ -8,7 +8,7 @@ import * as math from 'mathjs';
 
 const Calculator = styled.div`
     position: absolute;
-    top: 5em;
+    top: 8em;
 `
 const ButtonRow = styled.div`
     display: flex;
