@@ -2,7 +2,7 @@
 
 ## What
 A very basic calculator that concats input from key clicks and evaluates using the MathJS library. 
-Notebook paper using pure CSS because it's fun.
+Notebook paper using pure CSS because it's fun, and it adds a styling challenge so this isn't just about logic. 
 
 ## Why
 To keep React practice up while working at a place that is all and only jQuery (in 2020!). By using the MathJS libaray and not keeping track of  prev and curr inputs in state, I can focus on just passing props, styling, and — in 2020 — keeping it simple while chaos abounds.
@@ -18,4 +18,5 @@ That, my friends, is another project.
 * ReactJS / Create React App ... or CRApp
 * MathJS
 * Styled Components
+* Font Family is Indie Flower by Kimberly Geswein because when I'm being my neatest, that is how my numbers look.
 * [Color palette from Coolors](https://coolors.co/086788-07a0c3-f0c808-fff1d0-dd1c1a)
