@@ -6,9 +6,12 @@ const StyledButtonKey = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: ${props => props.buttontype === "operator" ? "lime" : "rebeccapurple"};
-    height: 5em;
-    width: 5em;
+    background: ${props => props.buttontype === "operator" ? "#F0C808" : "#07A0C3"};
+    color: ${props => props.buttontype === "operator" ? "#000" : "#fff"};
+    font-size: 2em;
+    line-height: 2em;
+    height: 2em;
+    width: 2em;
 `
 const isNotOp = value =>{
     return !isNaN(value) || value === "=" || value === ".";

@@ -4,19 +4,23 @@ import ButtonKey from './ButtonKey'
 import ClrButton from './ClrButton'
 import styled from 'styled-components';
 import * as math from 'mathjs';
-import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 
+
+const Calculator = styled.div`
+    position: absolute;
+    top: 5em;
+`
 const ButtonRow = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1em;
+    margin-bottom: 0.6em;
 `
 const ButtonsWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 315px;
     padding: 1em;
-    background: #dedede;
+    background: #FFF1D0;
 `
 
 
@@ -32,21 +36,16 @@ class CalculatorBasic extends Component {
 
     addToInput=(val)=>{
         // does not handle 2.3.4 but this is enough for me in a simple calc
-        const lastClick = this.state.input.slice(-1);
+        
+        let lastClick = this.state.input.slice(-1);
         if (isNaN(val) && isNaN(lastClick)){
             return;
-            // this.setState({
-            //     input: "Don't! Now press clear."
-            // });
-            // setTimeout(()=>{
-            //     this.setState({
-            //         input: "0"
-            //     });
-            // }, 2000);
+        
         }else{
             this.setState({
                 input: this.state.input + val
             });
+            console.log(lastClick)
         }
         
         
@@ -55,8 +54,9 @@ class CalculatorBasic extends Component {
 
     handleEqual=()=>{
         const evalInput = math.evaluate(this.state.input);
+        
         this.setState({
-            input:evalInput,
+            input:evalInput.toString(),
             isEvaluated: true
         })
     }
@@ -71,7 +71,7 @@ class CalculatorBasic extends Component {
 
     
         return (
-            <div>
+            <Calculator>
                 <Screen>{this.state.input}</Screen>
                 <ButtonsWrapper>
                     <ButtonRow>
@@ -102,7 +102,7 @@ class CalculatorBasic extends Component {
                         <ClrButton handleClear={()=>this.setState({input: "", isEvaluated: false})}>Clear</ClrButton>
                     </div>
                 </ButtonsWrapper>
-            </div>
+            </Calculator>
         )
     }
 }
