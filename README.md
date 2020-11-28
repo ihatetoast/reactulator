@@ -1,5 +1,7 @@
 # Simple calculator using MathJS
 
+![Calculator on notebook paper](reactulator.jpeg)
+
 ## What
 A very basic calculator that concats input from key clicks and evaluates using the MathJS library. 
 Notebook paper using pure CSS because it's fun, and it adds a styling challenge so this isn't just about logic. 
@@ -20,3 +22,4 @@ That, my friends, is another project.
 * Styled Components
 * Font Family is Indie Flower by Kimberly Geswein because when I'm being my neatest, that is how my numbers look.
 * [Color palette from Coolors](https://coolors.co/086788-07a0c3-f0c808-fff1d0-dd1c1a)
+
