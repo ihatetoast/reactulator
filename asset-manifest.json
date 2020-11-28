@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/reactulator/static/css/main.d18be20f.chunk.css",
+    "main.js": "/reactulator/static/js/main.7ef9d413.chunk.js",
+    "main.js.map": "/reactulator/static/js/main.7ef9d413.chunk.js.map",
+    "runtime-main.js": "/reactulator/static/js/runtime-main.18e7b5f8.js",
+    "runtime-main.js.map": "/reactulator/static/js/runtime-main.18e7b5f8.js.map",
+    "static/js/2.b6b270c5.chunk.js": "/reactulator/static/js/2.b6b270c5.chunk.js",
+    "static/js/2.b6b270c5.chunk.js.map": "/reactulator/static/js/2.b6b270c5.chunk.js.map",
+    "index.html": "/reactulator/index.html",
+    "static/css/main.d18be20f.chunk.css.map": "/reactulator/static/css/main.d18be20f.chunk.css.map",
+    "static/js/2.b6b270c5.chunk.js.LICENSE.txt": "/reactulator/static/js/2.b6b270c5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.18e7b5f8.js",
+    "static/js/2.b6b270c5.chunk.js",
+    "static/css/main.d18be20f.chunk.css",
+    "static/js/main.7ef9d413.chunk.js"
+  ]
+}
