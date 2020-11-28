@@ -3,10 +3,6 @@
   box-sizing: border-box;
 }
 .app{
-  display:flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
   background: #FFF1D0;
 }
 .app .red-line{
@@ -45,4 +41,13 @@
   background: #FFF1D0;
   border: 1px solid #ccc;
   left: 3em;
+}
+.paper {
+  position: relative;
+  background: #fff;
+  width: 80%;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
